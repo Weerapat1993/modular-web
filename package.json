@@ -48,11 +48,7 @@
       "import/no-unresolved": 0
     },
     "settings": {
-      "import/resolver": {
-        "webpack": {
-          "config": "config-overrides.js"
-        }
-      }
+      "import/resolver": "webpack"
     }
   }
 }
