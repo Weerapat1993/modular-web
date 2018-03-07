@@ -1,14 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import { Button } from 'antd';
+import { App } from 'Components/App'
 
 const Home = () => (
-  <div>
+  <App>
     <h1>Home</h1>
     <Link to='/about'>
       <Button type="primary">About</Button>
     </Link>
-  </div>
+  </App>
 )
 
 export default Home

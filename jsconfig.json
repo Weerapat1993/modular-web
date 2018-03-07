@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": [
+        "Assets/*",
+        "Components/*",
+        "Config/*",
+        "Features/*",
+        "Styles/*",
+        "Utils/*",
+      ]
+    }
+  }
+}
