@@ -9,7 +9,6 @@
       "Features": ["./src/features/*"],
       "Styles": ["./src/styles/*"],
       "Utils": ["./src/utils/*"],
-    },
-    "listFiles": true,
+    }
   }
 }
