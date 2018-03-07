@@ -3,12 +3,12 @@
     "baseUrl": ".",
     "paths": {
       "~/*": ["./src/*"],
-      "Assets": ["./src/assets/*"],
-      "Components": ["./src/components/*"],
-      "Config": ["./src/config/*"],
-      "Features": ["./src/features/*"],
-      "Styles": ["./src/styles/*"],
-      "Utils": ["./src/utils/*"],
+      "Assets/*": ["./src/assets/*"],
+      "Components/*": ["./src/components/**/*"],
+      "Config/*": ["./src/config/*"],
+      "Features/*": ["./src/features/*"],
+      "Styles/*": ["./src/styles/*"],
+      "Utils/*": ["./src/utils/*"],
     }
   }
 }
