@@ -2,14 +2,14 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "~/*": [
-        "Assets/*",
-        "Components/*",
-        "Config/*",
-        "Features/*",
-        "Styles/*",
-        "Utils/*",
-      ]
-    }
+      "~/*": ["./src/*"],
+      "Assets": ["./src/assets/*"],
+      "Components": ["./src/components/*"],
+      "Config": ["./src/config/*"],
+      "Features": ["./src/features/*"],
+      "Styles": ["./src/styles/*"],
+      "Utils": ["./src/utils/*"],
+    },
+    "listFiles": true,
   }
 }
