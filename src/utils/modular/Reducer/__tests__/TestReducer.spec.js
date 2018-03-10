@@ -23,4 +23,30 @@ describe('Test', () => {
     const expected = classReducer(action).setStateWithKeyFailure()
     expect(recieved).toEqual(expected)
   })
+
+  it('Test ConvertArray', () => {
+    const data = [
+      {
+        id: 'article:1',
+        name: 'John',
+      },
+      {
+        id: 'article:2',
+        name: 'Henry',
+      }
+    ]
+    const action = { type: 'SUCCESS', key: 'SUCCESS', data }
+    const recieved = classReducer(action).arrayToObject(data, 'id')
+    const expected = {
+      'article:1': {
+        id: 'article:1',
+        name: 'John',
+      },
+      'article:2': {
+        id: 'article:2',
+        name: 'Henry',
+      }
+    }
+    expect(recieved).toEqual(expected)
+  })
 })
