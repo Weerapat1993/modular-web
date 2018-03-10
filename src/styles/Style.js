@@ -38,19 +38,9 @@ class Style extends BaseStyle {
     this.borderRightRadius = this._setStyle('borderRightRadius')
     this.borderRightWidth = this._setStyle('borderRightWidth')
     this.borderRightColor = this._setStyle('borderRightColor')
-  }
-
-  size(value) {
-    return this
-      .width(value)
-      .height(value)
-  }
-
-  circle(value) {
-    return this
-      .width(value)
-      .height(value)
-      .borderRadius(value / 2)
+  
+    this.size = value => this.width(value).height(value)
+    this.circle = value => this.width(value).height(value).borderRadius(value / 2)
   }
 }
 
