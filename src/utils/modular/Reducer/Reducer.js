@@ -12,7 +12,7 @@ export class Reducer extends BaseReducer {
    * @return {State}
    */
   setStateWithKeyRequest(newState) {
-    return this.setStateWithKey({ 
+    return this.setStateWithKey({
       isFetching: true, 
       isReload: false, 
       error: '', 

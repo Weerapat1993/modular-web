@@ -1,4 +1,5 @@
 import { Reducer } from './Reducer'
+import { classReducer } from './BaseReducer'
 
 /**
  * @class TestReducer
@@ -24,4 +25,7 @@ export class TestReducer extends Reducer {
     }
   }
 }
+
+export const testReducer = classReducer(TestReducer)
+
 

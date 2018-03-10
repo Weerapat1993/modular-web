@@ -50,5 +50,6 @@
     "settings": {
       "import/resolver": "webpack"
     }
-  }
+  },
+  "eslintIgnore": ["*.test.js", "*.spec.js"]
 }

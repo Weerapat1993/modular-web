@@ -1,7 +1,4 @@
-import { TestReducer } from '../TestReducer'
-import { classReducer } from '../BaseReducer'
-
-const testReducer = classReducer(TestReducer)
+import { TestReducer, testReducer } from '../TestReducer'
 
 describe('Test', () => {
   const classReducer = (action) => new TestReducer({ action })._setInitial()
