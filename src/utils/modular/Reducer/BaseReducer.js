@@ -30,6 +30,8 @@ export class BaseReducer {
    * @param {{ state: State, action: Action }} props
    */
   constructor(props) {
+    this.initialState = {}
+    /** @type {State} */
     this.state = props.state
     /** @type {Action} */
     this.action = props.action
@@ -93,7 +95,7 @@ export class BaseReducer {
   }
 
   /**
-   * get State Data
+   * Get state in Reducer
    * @return {State}
    */
   getState() {
