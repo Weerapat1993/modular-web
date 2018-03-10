@@ -3,7 +3,7 @@ class BaseStyle {
     this.styles = {}
   }
 
-  _style(key) {
+  _setStyle(key) {
     return value => this._getStyle(key, value)
   }
 
