@@ -19,6 +19,21 @@ const styles = {
   fontSize: generateStyle('fontSize'),
   fontFamily: generateStyle('fontFamily'),
   backgroundColor: generateStyle('backgroundColor'),
+  borderRadius: generateStyle('borderRadius'),
+  borderWidth: generateStyle('borderWidth'),
+  borderColor: generateStyle('borderColor'),
+  borderTopRadius: generateStyle('borderTopRadius'),
+  borderTopWidth: generateStyle('borderTopWidth'),
+  borderTopColor: generateStyle('borderTopColor'),
+  borderBottomRadius: generateStyle('borderBottomRadius'),
+  borderBottomWidth: generateStyle('borderBottomWidth'),
+  borderBottomColor: generateStyle('borderBottomColor'),
+  borderLeftRadius: generateStyle('borderLeftRadius'),
+  borderLeftWidth: generateStyle('borderLeftWidth'),
+  borderLeftColor: generateStyle('borderLeftColor'),
+  borderRightRadius: generateStyle('borderRightRadius'),
+  borderRightWidth: generateStyle('borderRightWidth'),
+  borderRightColor: generateStyle('borderRightColor'),
 }
 
 const globalStyles = {
