@@ -30,4 +30,15 @@ describe('Styles', () => {
     const expected = { width: 30, height: 30, borderRadius: 15 }
     expect(recieved).toEqual(expected)
   })
+
+  it('Styles Undefined', () => {
+    const recieved = styles.width().get()
+    const expected = {}
+    expect(styles.width().get()).toEqual(expected)
+    expect(styles.width(undefined).get()).toEqual(expected)
+    expect(styles.width('').get()).toEqual(expected)
+    expect(styles.width(0).get()).toEqual({ width: 0 })
+    expect(styles.width(null).get()).toEqual(expected)
+    expect(styles.width(false).get()).toEqual(expected)
+  })
 })
