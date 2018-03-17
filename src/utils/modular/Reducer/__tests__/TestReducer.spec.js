@@ -36,15 +36,25 @@ describe('Test', () => {
       }
     ]
     const action = { type: 'SUCCESS', key: 'SUCCESS', data }
-    const recieved = classReducer(action).arrayToObject(data, 'id')
+    const recieved = classReducer(action).normalizeData(data, 'id')
     const expected = {
       'article:1': {
-        id: 'article:1',
-        name: 'John',
+        error: '',
+        isFetching: false,
+        isReload: true,
+        data: {
+          id: 'article:1',
+          name: 'John',
+        }
       },
       'article:2': {
-        id: 'article:2',
-        name: 'Henry',
+        error: '',
+        isFetching: false,
+        isReload: true,
+        data: {
+          id: 'article:2',
+          name: 'Henry',
+        }
       }
     }
     expect(recieved).toEqual(expected)

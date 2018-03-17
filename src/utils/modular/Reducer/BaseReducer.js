@@ -101,18 +101,4 @@ export class BaseReducer {
   getState() {
     return this.state
   }
-
-  /**
-   * Convert Array To Object with key
-   * @param {Array.<Object>} array
-   * @param {string} primaryKey
-   * @return {Object}
-   */
-  arrayToObject = (array, primaryKey = 'id') => {
-    const newData = {}
-    array.forEach((item) => {
-      newData[item[primaryKey]] = item
-    })
-    return newData
-  }
 }

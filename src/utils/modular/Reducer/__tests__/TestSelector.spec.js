@@ -10,7 +10,7 @@ describe('TestSelector', () => {
       }
     }
     const recieved = Product.get(state, 'abcde')
-    const expected = null
+    const expected = Product.defaultProps
     expect(recieved).toEqual(expected)
   })
 })
