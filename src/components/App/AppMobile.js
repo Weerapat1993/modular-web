@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import { func } from 'prop-types'
+import { View } from '../Native'
 import { Icon, Layout } from 'antd'
 import { TabBar } from 'antd-mobile'
 import { translate } from 'react-i18next'
 import { Shop } from '../../pages/shop'
+import { IconButton } from '../IconButton'
 import { SettingContainer } from 'Features/setting'
 import 'Styles/styles.less'
 import styles from './styles'
@@ -84,6 +86,9 @@ class AppMobile extends Component {
                 ))
               }
             </TabBar>
+            <View style={styles.btnFloating}>
+              <IconButton type='primary' color='primary' textColor='white' onPress={() => alert('Test')} />
+            </View>
           </div>
         </Content>
       </Layout>

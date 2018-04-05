@@ -25,8 +25,8 @@ const styles = {
   },
 }
 
-const View = ({ children, style }) => (
-  <div style={styles.viewStyle(style)}>{children}</div>
+const View = ({ children, style, onPress }) => (
+  <div onClick={onPress} style={styles.viewStyle(style)}>{children}</div>
 )
 
 View.propTypes = {
@@ -38,12 +38,14 @@ View.propTypes = {
   style: oneOfType([
     array,
     object,
-  ])
+  ]),
+  onPress: func,
 }
 
 View.defaultProps = {
   children: null,
-  style: {}
+  style: {},
+  onPress: () => null
 }
 
 export default View
