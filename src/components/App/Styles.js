@@ -1,25 +1,10 @@
-import { BaseStyle } from 'Styles/Style'
+import { GlobalStyle } from 'Styles/index'
 
-class Style extends BaseStyle {
-  // constructor() {
-  //   super()
-  //   // Customize Style
-  //   this.size = value => this.width(value).height(value)
-  //   this.circle = value => this.width(value).height(value).borderRadius(value / 2)
-  // }
-
-  // Customize style
-  size(value) {
-    return this
-      .width(value)
-      .height(value)
-  }
-
-  circle(value) {
-    return this
-      .width(value)
-      .height(value)
-      .borderRadius(value / 2)
+class Style extends GlobalStyle {
+  containerMobile = {
+    width: '100vw',
+    height: '100vh',
+    paddingTop: 60,
   }
 }
 

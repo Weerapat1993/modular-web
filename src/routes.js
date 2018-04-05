@@ -7,6 +7,8 @@ export const Routes = () => (
     <Switch>
       <Route exact path='/' component={Page.Home} />
       <Route path="/about" component={Page.About} />
+      <Route exact path="/shop" component={Page.Shop.Home} />
+      <Route path="/shop/create" component={Page.Shop.Create} />
     </Switch>
   </Router>
 )

@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import { Routes } from './routes'
 import configureStore from './config/store'
 import registerServiceWorker from './registerServiceWorker'
+import 'antd-mobile/dist/antd-mobile.less'
 
 const App = () => (
   <Provider store={configureStore()}>
