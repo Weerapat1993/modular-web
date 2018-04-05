@@ -9,6 +9,7 @@ export const Routes = () => (
       <Route path="/about" component={Page.About} />
       <Route exact path="/shop" component={Page.Shop.Home} />
       <Route path="/shop/create" component={Page.Shop.Create} />
+      <Route path="/settings" component={Page.Setting} />
     </Switch>
   </Router>
 )

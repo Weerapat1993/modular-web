@@ -6,6 +6,9 @@ import configureStore from './config/store'
 import registerServiceWorker from './registerServiceWorker'
 import 'antd-mobile/dist/antd-mobile.less'
 
+// Language
+import './language'
+
 const App = () => (
   <Provider store={configureStore()}>
     <Routes />

@@ -1,51 +1,60 @@
 import React, { Component } from 'react'
+import { func } from 'prop-types'
 import { Icon, Layout } from 'antd'
 import { TabBar } from 'antd-mobile'
+import { translate } from 'react-i18next'
 import { Shop } from '../../pages/shop'
+import { SettingContainer } from 'Features/setting'
 import 'Styles/styles.less'
 import styles from './styles'
 
 const { Content } = Layout
 
 class AppMobile extends Component {
+  static propTypes = {
+    t: func.isRequired,
+  }
+
   constructor(props) {
     super(props);
     this.state = {
       selectedTab: 'Home',
       hidden: false,
-      fullScreen: false,
-    };
+    }
   }
 
   renderContent = (key) => {
     switch(key) {
       case 'Shop':
         return <Shop.Home />
+      case 'Setting':
+        return <SettingContainer />
       default:
         return <Shop.Create />
     }
   }
 
   render() {
+    const { t } = this.props
     const tabs = [
       {
         key: 'Home',
-        title: 'Home',
+        title: t('home'),
         icon: 'home',
       },
       {
         key: 'Shop',
-        title: 'Shop',
+        title: t('shop'),
         icon: 'shopping-cart',
       },
       {
-        key: 'Wallet',
-        title: 'Wallet',
-        icon: 'wallet',
+        key: 'Notificaction',
+        title: t('notification'),
+        icon: 'bell',
       },
       {
         key: 'Setting',
-        title: 'Setting',
+        title: t('setting'),
         icon: 'setting',
       }
     ]
@@ -82,4 +91,4 @@ class AppMobile extends Component {
   }
 }
 
-export default AppMobile
+export default translate()(AppMobile)
