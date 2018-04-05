@@ -1,12 +1,28 @@
 import React from 'react'
-import { oneOfType, object, func, element, node } from 'prop-types'
+import { oneOfType, object, array, func, element, node } from 'prop-types'
 
 const styles = {
-  viewStyle: (style) => ({
-    display: 'flex',
-    flexDirection: 'column',
-    ...style,
-  }),
+  viewStyle: (style) => {
+    const defaultView = {
+      display: 'flex',
+      flexDirection: 'column',
+    }
+    if(Array.isArray(style)) {
+      let newView = defaultView
+      style.forEach(styleItem => {
+        newView = {
+          ...newView,
+          ...styleItem
+        }
+      })
+      return newView
+    }
+    return {
+      display: 'flex',
+      flexDirection: 'column',
+      ...style,
+    }
+  },
 }
 
 const View = ({ children, style }) => (
@@ -19,7 +35,10 @@ View.propTypes = {
     element,
     node,
   ]),
-  style: object
+  style: oneOfType([
+    array,
+    object,
+  ])
 }
 
 View.defaultProps = {
