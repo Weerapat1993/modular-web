@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { Card, Avatar } from 'antd'
 import { View } from 'Components/Native'
+import { LoadImage } from 'Components/LoadImage'
 import faker from 'faker'
+import { styles } from 'Styles/index'
 
 const { Meta } = Card
 
@@ -16,11 +18,11 @@ class ShopCreate extends Component {
               key={key}
               hoverable
               style={{ width: '100%', marginBottom: 10 }}
-              cover={<img alt="example" src={faker.image.cats()} />}
+              cover={<LoadImage url={faker.image.avatar()} />}
             >
               <Meta
                 title={faker.name.title()}
-                avatar={<Avatar src={faker.image.avatar()} />}
+                avatar={<LoadImage url={faker.image.avatar()} style={styles.circle(30)} />}
                 description={faker.lorem.lines(1)}
               />
             </Card>
