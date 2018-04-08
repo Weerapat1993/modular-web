@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Card, Avatar } from 'antd'
+import { Card } from 'antd'
 import { View } from 'Components/Native'
 import { LoadImage } from 'Components/LoadImage'
 import faker from 'faker'
