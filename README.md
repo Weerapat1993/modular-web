@@ -6,3 +6,8 @@ cd modular-example
 npm install
 npm start
 ```
+
+**How to run storybook**
+```sh
+npm run storybook
+```
