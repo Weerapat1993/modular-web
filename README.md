@@ -1,8 +1,8 @@
 # Modular React Web
 
 ```sh
-modular init modular-example
-cd modular-example
+modular init modular-web
+cd modular-web
 npm install
 npm start
 ```
