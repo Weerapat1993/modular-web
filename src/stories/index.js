@@ -6,6 +6,7 @@ import { linkTo } from '@storybook/addon-links';
 
 import { Welcome } from '@storybook/react/demo';
 import { Button } from '../components/Button'
+import { Card } from '../components/Card'
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
@@ -28,6 +29,25 @@ storiesOf('Button', module)
         <Button color='black' onClick={action('clicked')}>Black</Button>
         <Button color='gray' onClick={action('clicked')}>Gray</Button>
       </div>
+    </Fragment>
+  )
+);
+
+storiesOf('Card', module)
+  .add('Card Basic', () => (
+    <Fragment>
+      <Card title='Card Title' actions={() => 'Actions'}>
+        <span>Card Body</span>
+      </Card>
+      <Card title='Card Title' color='red' actions={() => 'Actions'}>
+        <span>Card Body</span>
+      </Card>
+      <Card title='Card Title' color='green' actions={() => 'Actions'}>
+        <span>Card Body</span>
+      </Card>
+      <Card title='Card Title' color='blue' actions={() => 'Actions'}>
+        <span>Card Body</span>
+      </Card>
     </Fragment>
   )
 );
