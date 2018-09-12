@@ -42,6 +42,7 @@
     "react-dom": "^16.2.0",
     "react-i18next": "^7.5.1",
     "react-lazy-image": "^1.1.0",
+    "react-loading-skeleton": "^0.6.1",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
     "react-sizes": "^1.0.3",

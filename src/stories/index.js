@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
-
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
-
 import { Welcome } from '@storybook/react/demo';
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
+
 import { Button } from '../components/Button'
 import { Card } from '../components/Card'
 
@@ -33,21 +33,23 @@ storiesOf('Button', module)
   )
 );
 
+const cardArr = ['red', 'green', 'blue']
+
 storiesOf('Card', module)
   .add('Card Basic', () => (
     <Fragment>
-      <Card title='Card Title' actions={() => 'Actions'}>
-        <span>Card Body</span>
+      <Card title={<Skeleton width={200} count={1} />} actions={() => 'Actions'}>
+        <Skeleton count={5} />
       </Card>
-      <Card title='Card Title' color='red' actions={() => 'Actions'}>
-        <span>Card Body</span>
-      </Card>
-      <Card title='Card Title' color='green' actions={() => 'Actions'}>
-        <span>Card Body</span>
-      </Card>
-      <Card title='Card Title' color='blue' actions={() => 'Actions'}>
-        <span>Card Body</span>
-      </Card>
+      {
+        cardArr.map((item, key) => (
+          <SkeletonTheme key={key} highlightColor={item}>
+            <Card title={<Skeleton width={200} count={1} />} color={item} actions={() => 'Actions'}>
+              <Skeleton count={5} />
+            </Card>
+          </SkeletonTheme>
+        ))
+      }
     </Fragment>
   )
 );

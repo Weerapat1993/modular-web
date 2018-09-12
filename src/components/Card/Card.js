@@ -60,7 +60,12 @@ const Card = (props) => {
 }
 
 Card.propTypes = {
-  title: string,
+  title: oneOfType([
+    string,
+    node,
+    func,
+    element,
+  ]),
   children: oneOfType([
     node,
     func,
